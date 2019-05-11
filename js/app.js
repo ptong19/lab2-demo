@@ -93,8 +93,6 @@ var guess = prompt(userName + 'What is the date of my birthday? hint between 1 t
                         }guess = prompt('Try more');
 
 
-
-
                     }else if (guess > 6) {
                         console.log('guessed too high!');
                         alert('too High!!'); 
@@ -107,22 +105,45 @@ var guess = prompt(userName + 'What is the date of my birthday? hint between 1 t
                     }  
                 }
 
-var viSit = prompt(userName+' Let guess Where I would like to visit?')
-var wannaGo =['Paris','Tokyo','China','London','Venice','Singapore']
+// var viSit = prompt(userName+' Let guess Where I would like to visit?')
+// var wannaGo =['Paris','Tokyo','China','London','Venice','Singapore']
 
-viSit = viSit.toLocaleUpperCase();
+// viSit = viSit.toLocaleUpperCase();
 
-var i = 0;
-while(i < 6) {
+// // var i = 0;
+// // while(i < 6) {
 
-    if (viSit === wannaGo[0] || wannaGo[1] || wannaGo[2] || wannaGo[3] || wannaGo[4] || wannaGo[5]) {
-        viSit = prompt( ' Try again plz Hint Japan city , England city ,Italy city')
-    } else  {
-        alert('Niceeeeeee!!! How do you know !!!!!');
+// //     if (viSit === wannaGo[0] || wannaGo[1] || wannaGo[2] || wannaGo[3] || wannaGo[4] || wannaGo[5]) {
+// //         viSit = prompt( 'Try again plz Hint Japan city , England city ,Italy city');
+// //     } else  {
+// //         alert('Niceeeeeee!!! How do you know !!!!!');
+// //         break;
+// //     } 
+// //            i++;
+// // }
+
+
+var wannaGo = ['Paris','Tokyo','China','London','Venice','Singapore'];
+var j = 0;
+var isCorrect = false;
+while(j < 6){
+    var whereTo = prompt('Where I would like to visit?');
+    j++;
+    for(var a = 0; a < wannaGo.length; a++){
+        if (whereTo === wannaGo[a]){
+       alert('You got it! I really want to visit'+ wannaGo); 
+       isCorrect = true;
+       break;
+     }
+
+    }
+
+    if(isCorrect === true){
         break;
-    } 
-            i++;
-}
+    }
+
+ }
+
 // alert('Wow !!! '+ userName + " " + ' you are such a good gussing ');
 // alert('Have a wonderful day'+ " " + userName)
 // 
