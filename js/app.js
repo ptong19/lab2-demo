@@ -77,33 +77,56 @@ alert('My name is PT Nice to meet you ' + userName);
 // }
 
 
+function endGame(tries){
+  if (tries === 3)
+  {
+    console.log('sorry your guess is over');
+    alert('done');
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+
+
+}
 
 var guess = prompt(userName + 'What is the date of my birthday? hint between 1 to 10');
 
-                 for( var i = 0; i < 4; i++){
-                     
-                    if (guess < 6) {
-                        console.log('guessed too low!');
-                        alert('too low!!');
-                           if (i === 3){
+for( var i = 0; i < 4; i++)
+{
+// Guess less than six
+  if (guess < 6)
+  {
+    console.log('guessed too low!');
+    alert('too low!!');
+    //Calls a function that checks if the last guess has been made and ends game if true
+    if (endGame(i)) break;
 
-                            console.log('sorry your guess is over');
-                            alert('done');
-                            break;
-                        }guess = prompt('Try more');
+    guess = prompt('Try more');
+  }
 
 
-                    }else if (guess > 6) {
-                        console.log('guessed too high!');
-                        alert('too High!!'); 
-                        guess = prompt('Try more');
-                    } else {
-                        console.log('Good Job!');
-                        alert('Bravo U got it!!');
-                        break;
+  //guess is greater than six
+  else if (guess > 6)
+  {
+    console.log('guessed too high!');
+    alert('too High!!');
 
-                    }  
-                }
+    //Calls a function that checks if the last guess has been made and ends game if true
+    if (endGame(i)) break;
+
+    guess = prompt('Try more');
+  }
+  else
+  {
+    console.log('Good Job!');
+    alert('Bravo U got it!!');
+    break;
+  }
+}
+
 
 // var viSit = prompt(userName+' Let guess Where I would like to visit?')
 // var wannaGo =['Paris','Tokyo','China','London','Venice','Singapore']
