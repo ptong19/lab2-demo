@@ -9,6 +9,9 @@ header {
   text-align: center
 }
 
+ol{
+    list-style: decimal;
+}
 
 .toph1 {
     
